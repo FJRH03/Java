@@ -1,14 +1,19 @@
-package empleado;
-
+package usopersona;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 @SuppressWarnings("unused")
-public class Empleado {
+public class Empleado extends Persona{
+	
+	//CONSTRUCCION METODO ABSTRACTO HERADADO DE PERSONA
+	public String getDescripcion() {
+		return "este empleado tiene un sueldo de: " + sueldo;
+	}
+	
 
 	//CONSTRUCTOR EMPLEADO
 	public Empleado(String nombre, double sueldo, int agno, int mes, int dia) {
-		this.nombre=nombre;
+		super(nombre);
 		this.sueldo=sueldo;
 		
 		//Construir fecha con las variables de locales del metodo constructor
@@ -18,13 +23,8 @@ public class Empleado {
 		fechaAlta=calendario.getTime();
 	}
 	
-	//OTRO CONSTRUCTOR
-	public Empleado(String nombre) {
-		this(nombre,3000,2000,01,01);
-	}
 	
-	
-	
+		
 	//Metodo get Sueldo
 	public double getSueldo() {
 		return sueldo;
@@ -41,14 +41,8 @@ public class Empleado {
 		sueldo+=aumento;
 	}
 	
-	//Metodo get nombre
-	public String getNombre() {
-		return nombre;
-	}
 	
-
 	//CAMPOS DE CLASE
-	private String nombre;
 	private double sueldo;
 	private Date fechaAlta;
 

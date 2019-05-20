@@ -3,9 +3,7 @@ package poo;
 //clase coche (curso poo pildoras) video 28, 29, 30, 31, 32
 public class Coche {
 
-	//atributos comunes
-	//modificador de acceso para encapsular (private, protected, public)
-	//encapsule con private el acceso a los valores de las propiedades
+	//Campos de clase
 	
 	private int ruedas;
 	private int largo;
@@ -22,8 +20,7 @@ public class Coche {
 	
 	
 	
-	//metodo cosntructor clase coche
-	//datos generales para toda la clase
+	//Constructor
 	public Coche() {
 		ruedas=4;
 		largo=2000;
@@ -35,26 +32,29 @@ public class Coche {
 	
 	
 	//metodo GETTER para los datos generales
-	public String getDatosCoche() {
-		return "El coche tiene " + ruedas + " ruedas"
-				+". Mide " + largo/1000 +" metros con un ancho de "
+	public String getDatosGenerales() {
+		return "El coche tiene: " + ruedas + " ruedas"
+				+", mide: " + largo/1000 +" metros con un ancho de "
 				+ ancho + " cm  y un peso de plataforma de " 
-				+ pesoPlataforma + " kilos." ;
+				+ pesoPlataforma + " kilos" + ", y es color: " + this.color + ".";
 	}
 	
 	//metodo SETTER para el valor color
+	
 	public void setColor(String color) { //parametro color
 		this.color=color;
 		
 	}
 	
 	//metodo GETTER para el color del coche
+	
 	public String getColor() {
 		return "El color del coche es: " +color;
 	}
 	
 	
 	//Getter Asientos Cuero
+	
 	public String getAsientosCuero() {
 		//this.asientosCuero apunta a la variable de clase
 		if(asientosCuero==true) {
@@ -65,6 +65,7 @@ public class Coche {
 	}
 	
 	//Setter Asientos Cuero
+	
 	public void setAsientosCuero(String asientosCuero) {
 		if(asientosCuero.equalsIgnoreCase("si")) {//si pasamos un si como parametro
 			this.asientosCuero=true;
@@ -74,6 +75,7 @@ public class Coche {
 	}
 	
 	//Setter Climatizador
+	
 	public void setClimatizador(String climatizador) {
 		if(climatizador.equalsIgnoreCase("si")) {
 			this.climatizador=true;
@@ -83,6 +85,7 @@ public class Coche {
 	}
 	
 	//Getter Climatizador
+	
 	public String getClimatizador() {
 		if (climatizador==true) {
 			return "El coche tiene climatizador";
@@ -92,6 +95,7 @@ public class Coche {
 	}
 	
 	//Metodo Setter + Getter pesoTotal
+	
 	public String setPesoCoche() {
 		int pesoCarroceria=500;
 		this.pesoTotal=pesoPlataforma+pesoCarroceria;
@@ -109,6 +113,7 @@ public class Coche {
 	
 	
 	//Metodo Getter para el precio del coche
+	
 	public double getPrecioCoche() {
 		int precioTotal=10000;
 		

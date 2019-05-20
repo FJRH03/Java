@@ -13,9 +13,9 @@ public class Main {
 		Empleado emp2 = new Empleado("Martha Gonzalez", 25000, 2016, 12, 10);
 		Empleado emp3 = new Empleado("Hugo Lopez", 2000, 2012, 03, 20);
 		
-		emp1.setSueldo(5);
-		emp2.setSueldo(10);
-		emp3.setSueldo(7);
+		emp1.setAumento(5);
+		emp2.setAumento(10);
+		emp3.setAumento(7);
 		
 		System.out.println("Nombre: " + emp1.getNombre() + ", sueldo: " + 
 		emp1.getSueldo() + ", fecha de alta: " + emp1.getFechaAlta());

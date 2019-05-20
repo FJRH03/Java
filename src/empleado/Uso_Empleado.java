@@ -14,7 +14,7 @@ public class Uso_Empleado {
 		
 		//subirles el 5% a su sueldo utilizando un bucle for
 		for (int i=0; i<3; i++) {
-			misEmpleados[i].setSueldo(5);
+			misEmpleados[i].setAumento(5);
 		}
 		
 		//imprimir en pantalla la informacion de los empleados
