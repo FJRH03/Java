@@ -20,7 +20,14 @@ public class Uso_Empleado_Mejorado {
 		misEmpleados[3] = new Empleado("Kath Lozano");
 		misEmpleados[4] = jefe_RRHH; //polimorfismo:principio de sustitucion
 				
-
+		//TOMAR DECISIONES
+		System.out.println(jefe_RRHH.tomarDecisiones("Aumentar dias de vacaciones"));
+		
+		//Set bonus
+		System.out.println("El Jefe: "+ jefe_RRHH.getNombre() + " tiene un bonus de: " +jefe_RRHH.setBonus(500));
+		System.out.println(misEmpleados[3].getNombre() + " tiene un bono de: " + misEmpleados[3].setBonus(200));
+		
+		
 		// subirles el 5% a su sueldo utilizando un bucle for
 		for (Empleado e : misEmpleados) {
 			e.setAumento(5);

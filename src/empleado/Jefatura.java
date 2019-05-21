@@ -1,7 +1,7 @@
 package empleado;
 
 @SuppressWarnings("unused")
-public class Jefatura extends Empleado {
+public class Jefatura extends Empleado implements Jefes  {
 
 	// Constructor de Empleado
 	// Super hace la llamada al constructor padre
@@ -9,6 +9,19 @@ public class Jefatura extends Empleado {
 		super(nombre, sueldo, agno, mes, dia);
 
 	}
+	
+	//METODO HEREDADO DE LA INTERFAZ JEFES
+	@Override
+	public String tomarDecisiones(String decision) {
+		return "Un miembro de la direccion a tomado la decision de: " + decision;
+	}
+	
+	//METODO DE INTERFAZ TRABAJADORES
+		@Override
+		public double setBonus(double gratificacion) {
+			double prima=2000;
+			return Trabajadores.bonus_base+gratificacion+prima;
+		}
 
 	private double incentivo;
 
@@ -25,5 +38,9 @@ public class Jefatura extends Empleado {
 		return sueldoJefe + incentivo;
 
 	}
+
+	
+
+	
 
 }

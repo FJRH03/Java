@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 @SuppressWarnings("unused")
-public class Empleado {
+public class Empleado implements Trabajadores {
 
 	//CONSTRUCTOR EMPLEADO
 	public Empleado(String nombre, double sueldo, int agno, int mes, int dia) {
@@ -21,6 +21,12 @@ public class Empleado {
 	//OTRO CONSTRUCTOR
 	public Empleado(String nombre) {
 		this(nombre,3000,2000,01,01);
+	}
+	
+	//METODO DE LA INTERFAZ TRABAJADORES
+	@Override
+	public double setBonus(double gratificacion) {
+		return Trabajadores.bonus_base+gratificacion;
 	}
 	
 	
@@ -51,5 +57,7 @@ public class Empleado {
 	private String nombre;
 	private double sueldo;
 	private Date fechaAlta;
+	
+
 
 }
