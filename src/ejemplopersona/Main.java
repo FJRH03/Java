@@ -1,4 +1,4 @@
-package usopersona;
+package ejemplopersona;
 
 public class Main {
 	
