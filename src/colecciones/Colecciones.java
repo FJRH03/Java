@@ -1,11 +1,11 @@
 package colecciones;
 
 import java.util.ArrayList;
-import java.util.concurrent.SynchronousQueue;
 
 
 public class Colecciones {
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		
 		ArrayList c1 = new ArrayList();
