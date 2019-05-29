@@ -15,7 +15,7 @@ public class Alumnos {
 	@SuppressWarnings("resource")
 	public void leerArreglo() {
 		Scanner lector = new Scanner(System.in);
-		for (int i = 0; i < arreglo.length; i++) {
+		for (int i : arreglo) {
 			System.out.println("Ingrese la " + (i + 1) + " nota:");
 			arreglo[i] = lector.nextInt();
 		}
